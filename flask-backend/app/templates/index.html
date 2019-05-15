@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+{% block head %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='vendor/magnific-popup/magnific-popup.css')}}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='css/creative.min.css')}}">
+
+{% endblock %}
+
+  </head>
+
+{% block content %}
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Entertainment Recommendations</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Enter a Twitter handle to find new shows and concerts.</p>
+            <form action="" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.handle(size=32) }}<br>
+            {% for error in form.handle.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            <p><br>
+            <button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+{% endblock %}
+
+
+
+
+
+{% block scripts %}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('.static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{url_for('.static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/scrollreveal/scrollreveal.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{url_for('.static', filename='js/creative.min.js')}}"></script>
+{% endblock %}
+
+{% block d3 %}
+{% endblock %}
+
+</html>
+

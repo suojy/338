@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+{% block head %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='vendor/magnific-popup/magnific-popup.css')}}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('.static', filename='css/creative.min.css')}}">
+
+{% endblock %}
+
+  </head>
+
+  {% block navbar %}
+    <!-- Navigation -->
+    <nav class="bg-grey navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">Entertainment Recommendations</a>
+      </div>
+    </nav>
+{% endblock %}
+{% block content %}
+    <section class="text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="sample-user">
+              {% if sample_data.prediction %}
+                <img class="mx-auto rounded-circle" src="{{sample_data.profile_image}}" alt="">
+              {% else %}
+                <img class="mx-auto rounded-circle" src="{{url_for('.static', filename='img/samples/thumbnails/')}}{{sample_data.profile_image}}" alt="">
+              {% endif %}
+              <h3>{{ sample_data.name }}</h3>
+            </div>
+          </div>
+        <div class="col-sm-6 text-center" style="color:black;margin-top:70px">
+
+      <div><h2>Recommendation:</h2> </div>
+       <div><h3>{{ sample_data.category[0]}}</h3></div>
+       <div><h5>{{ sample_data.category[1]}}</h5></div>
+
+
+          </div>
+        </div>
+      <div class="row">
+        </div>
+        <hr>
+      <div class="col-lg-8 mx-auto text-center">
+            <form action="" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.handle(size=32) }}<br>
+            {% for error in form.handle.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            <p><br>
+            <button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Enter A Handle</button>
+            </form>
+          </div>
+      </div>
+    </section>
+
+
+{% endblock %}
+
+
+
+
+
+{% block scripts %}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('.static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{url_for('.static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/scrollreveal/scrollreveal.min.js')}}"></script>
+    <script src="{{url_for('.static', filename='vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{url_for('.static', filename='js/creative.min.js')}}"></script>
+{% endblock %}
+
+{% block d3 %}
+{% endblock %}
+
+</html>
+
+
+
+
+
+
