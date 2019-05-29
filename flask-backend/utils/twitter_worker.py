@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+
+@author: Ashu Gupta
+
+"""
 import csv
 import pandas as pd
 import tweepy

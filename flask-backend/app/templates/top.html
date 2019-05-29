@@ -1,0 +1,299 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+      <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+    {% block head %}
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{{url_for('.static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+        <!-- Custom fonts for this template -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="{{url_for('.static', filename='vendor/magnific-popup/magnific-popup.css')}}">
+    
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="{{url_for('.static', filename='css/creative.min.css')}}">
+    
+    {% endblock %}
+    
+      </head>
+    
+      {% block navbar %}
+        <!-- Navigation -->
+        <nav class="bg-grey navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+          <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">Entertainment Recommendations</a>
+          </div>
+
+         
+
+        </nav>
+    {% endblock %}
+    {% block content %}
+       <section>
+            <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                      <h2 class="section-heading">Top Frequent Words</h2>
+                      <hr class="my-4">
+                      <p class="mb-5"></p>
+                    </div>
+                  </div>
+        <div style="margin:10px" class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Hamilton</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Hamilton'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Dames At Sea</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Dames At Sea'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">West Side Story</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['West Side Story'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">The Secret of the Biological Clock</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Secret of the Biological Clock'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-deck" style="margin:10px">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Next to Normal</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Next to Normal'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Mary Shelley's Frankenstein</h5>
+                <p>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][0]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][1]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][2]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][3]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][4]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][5]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][6]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][7]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][8]}}</span></h4>
+                  <h4><span class="badge badge-light">{{sample_data["Mary Shelley's Frankenstein"][9]}}</span></h4>
+                  </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Miracle</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Miracle'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">The Adventures of Augie March</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Adventures of Augie March'][9]}}</span></h4>
+
+                </p>
+              </div>
+            </div>
+          </div> 
+          <div class="card-deck" style="margin:10px">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Into the Breeches!</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Into the Breeches!'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Rent</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Rent'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">The Princess And the Pea</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['The Princess And the Pea'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Cirque du Solei - Volta</h5>
+                <p>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][0]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][1]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][2]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][3]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][4]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][5]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][6]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][7]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][8]}}</span></h4>
+                <h4><span class="badge badge-light">{{sample_data['Cirque du Solei - Volta'][9]}}</span></h4>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+       </section>
+    
+    
+    {% endblock %}
+    
+    
+    
+    
+    
+    {% block scripts %} 
+    
+        <!-- Bootstrap core JavaScript -->
+        <script src="{{url_for('.static', filename='vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{url_for('.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    
+        <!-- Plugin JavaScript -->
+        <script src="{{url_for('.static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+        <script src="{{url_for('.static', filename='vendor/scrollreveal/scrollreveal.min.js')}}"></script>
+        <script src="{{url_for('.static', filename='vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+    
+        <!-- Custom scripts for this template -->
+        <script src="{{url_for('.static', filename='js/creative.min.js')}}"></script>
+    {% endblock %}
+    
+    {% block d3 %}
+    {% endblock %}
+    
+    </html>
+    
+    
+    
+    
+    
+    
+        
